@@ -11,7 +11,7 @@ export class GoogleLocators {
     }
 
     public getResultItemHeadersByText(text: string) {
-        return cy.get('div[role="heading"]', this.tenSecondsTimeout).find('span', this.tenSecondsTimeout).contains(`${text}`).first();
+        return cy.get('div[role="heading"]', this.tenSecondsTimeout).find('span', this.tenSecondsTimeout).contains(`${text}`);
     }
 
 }

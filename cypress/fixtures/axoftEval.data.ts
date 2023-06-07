@@ -1,3 +1,10 @@
 export const testData = {
-    googleKeyword: "Axoft Argentina"
+    googleData: {
+        googleKeyword: "Axoft Argentina"
+    },
+    loginData: {
+        testLoginUsername: "student",
+        testLoginPassword: "Password123",
+        loginMsgTitle: "Logged In Successfully"
+    }
 }

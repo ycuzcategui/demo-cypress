@@ -19,7 +19,7 @@ export class GooglePage {
     }
 
     private assertRendered() {
-        cy.title().should("eq", this.title);
+        cy.title().should('eq', this.title);
         googleLocators.getSearchInput().should('exist');
     }
 
