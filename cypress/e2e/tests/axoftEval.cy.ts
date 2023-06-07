@@ -1,14 +1,18 @@
 import { GooglePage } from "../../pages/google.page";
 import { TestLoginPage } from "../../pages/testLogin.page";
 import { LoginSuccessPage } from "../../pages/loginSuccess.page";
+import { OpencartPage } from "../../pages/opencart.page";
 import { testData } from "../../fixtures/axoftEval.data";
 
 const googlePage = new GooglePage();
 const testLoginPage = new TestLoginPage();
 const loginSuccessPage = new LoginSuccessPage();
+const opencartPage = new OpencartPage();
+
 const {
     googleData,
-    loginData
+    loginData,
+    opencartData
 } = testData;
 
 describe('Axoft Evaluation - Section 2', () => {
@@ -26,6 +30,12 @@ describe('Axoft Evaluation - Section 2', () => {
         cy.wait(1000); // TODO: Change waiting mechanism
         loginSuccessPage.assertRendered();
         expect(loginSuccessPage.assertLoginSuccessMsgTitle(loginData.loginMsgTitle)).to.equal(true);
+    });
+
+    it('Exercise 8: Dropdown List Test', () => {
+        opencartPage.visit();
+        opencartPage.goToSearchCriteria();
+        opencartPage.selectAndAssertCategoryFromDropdown(opencartData.category.text, opencartData.category.val);
     });
 
     afterEach('Wait on each scenario', () =>{
