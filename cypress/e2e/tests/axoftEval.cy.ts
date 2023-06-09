@@ -38,6 +38,12 @@ describe('Axoft Evaluation - Section 2', () => {
         opencartPage.selectAndAssertCategoryFromDropdown(opencartData.category.text, opencartData.category.val);
     });
 
+    it('Exercise 9: Form Test', () => {
+        opencartPage.goToRegisterView(opencartData.registerPath);
+        cy.wait(1000); // TODO: Change waiting mechanism
+        opencartPage.completeRegisterFormAndSubmit(opencartData.registerPositiveParams);
+    });
+
     afterEach('Wait on each scenario', () =>{
         cy.wait(2000);
     });
