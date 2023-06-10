@@ -10,3 +10,5 @@ This repository stores Demo automated tests in [Cypress](https://docs.cypress.io
 
 ## Execution Demo Recording
 ========================================
+
+* [Google drive video](https://drive.google.com/file/d/1li8vPyDHL071l49m1RfKF4maW1aJI1-E/view?usp=drive_link) version.
