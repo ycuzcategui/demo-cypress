@@ -10,5 +10,3 @@ This repository stores Demo automated tests in [Cypress](https://docs.cypress.io
 
 ## Execution Demo Recording
 ========================================
-
-![](./cypress/fixtures/assets/readme/demo-cypress-yuro.mov)
