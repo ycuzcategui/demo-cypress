@@ -95,4 +95,13 @@ export class OpencartPage {
         this.clickOnContinueButton();
     }
 
+    public assertFormErrorMessageByText(message: string): boolean {
+        try {
+            opencartLocators.getFormErrorMessageByText(message).should('exist');
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
+
 }

@@ -70,4 +70,8 @@ export class OpencartLocators {
         return cy.get('input[type="submit"][value="Continue"]', this.tenSecondsTimeout);
     }
 
+    public getFormErrorMessageByText(message: string) {
+        return cy.get('div.text-danger', this.tenSecondsTimeout).contains(message);
+    }
+
 }
